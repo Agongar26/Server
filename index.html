@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexgg Photos</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index.css" />
+
+  <!-- JS -->
+  <script src="js/menu.js" defer></script>
+</head>
+
+<body class="bg-background text-foreground">
+
+  <!-- NAV -->
+  <header class="fixed top-0 w-full z-50 bg-background border-b border-border bg-white">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-xl font-medium">
+        📷 Alexgg_photos
+      </a>
+
+      <nav class="hidden md:flex gap-8 text-sm">
+        <a href="index.html">Inicio</a>
+        <a href="category.html?cat=astrofotografia">Astro</a>
+        <a href="category.html?cat=retrato">Retrato</a>
+        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=paisaje">Paisaje</a>
+        <a href="category.html?cat=animales">Animales</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+    </div>
+
+    <div id="mobileMenu"
+      class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 bg-background border-t border-border">
+      <nav class="flex flex-col gap-4 px-4 py-6">
+        <a href="index.html">Inicio</a>
+        <a href="category.html?cat=astrofotografia">Astro</a>
+        <a href="category.html?cat=retrato">Retrato</a>
+        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=paisaje">Paisaje</a>
+        <a href="category.html?cat=animales">Animales</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative pt-40 pb-32 hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="relative max-w-4xl mx-auto text-center text-white px-4">
+      <h1 class="hero-title text-neutral-400">Mi Portafolio Fotográfico</h1>
+      <p class="hero-text text-sm">
+        Retratos, paisajes y momentos únicos capturados a través de mi lente.
+      </p>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-center font-bold mb-12">Categorías</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Astro -->
+        <a href="category.html?cat=astrofotografia" class="group relative h-80 overflow-hidden rounded-xl">
+          <img src="assets/images/astro/astro1.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
+            <h3 class="text-white text-3xl font-light">Astrofotografía</h3>
+          </div>
+        </a>
+
+        <!-- Retrato -->
+        <a href="category.html?cat=retrato" class="group relative h-80 overflow-hidden rounded-xl">
+          <img src="assets/images/retrato/retrato1.jpeg"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
+            <h3 class="text-white text-3xl font-light">Retrato</h3>
+          </div>
+        </a>
+
+        <!-- Deportes -->
+        <a href="category.html?cat=deportes" class="group relative h-80 overflow-hidden rounded-xl">
+          <img src="assets/images/deportes/deporte1.jpeg"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
+            <h3 class="text-white text-3xl font-light">Deportes</h3>
+          </div>
+        </a>
+
+        <!-- Paisaje -->
+        <a href="category.html?cat=paisaje" class="group relative h-80 overflow-hidden rounded-xl">
+          <img src="assets/images/paisaje/paisaje1.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
+            <h3 class="text-white text-3xl font-light">Paisaje</h3>
+          </div>
+        </a>
+
+        <!-- Animales -->
+        <a href="category.html?cat=animales" class="group relative h-80 overflow-hidden rounded-xl">
+          <img src="assets/images/animales/animales1.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
+            <h3 class="text-white text-3xl font-light">Animales</h3>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12 px-4 mt-24">
+    <div class="max-w-7xl mx-auto text-center space-y-2">
+      <p class="text-sm text-neutral-400">
+        © 2025 Mi Portafolio
+      </p>
+      <p class="text-xs text-neutral-500">
+        Fotografía profesional · Todos los derechos reservados
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

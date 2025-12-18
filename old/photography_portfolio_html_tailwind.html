@@ -1,0 +1,176 @@
+# Photography Portfolio — Traducción DIRECTA de Figma (React → HTML + Tailwind)
+
+> Esta versión **NO interpreta** el diseño.
+> Está **calcada** de los archivos de Figma que has enviado (`Home.tsx`, `CategoryPage.tsx`, `Navigation.tsx`, `theme.css`).
+> Si algo no se ve igual, es porque falta Tailwind o las CSS variables.
+
+---
+
+## 1️⃣ Requisitos OBLIGATORIOS (si no, no se verá igual)
+
+### index.html (head)
+```html
+<link rel="stylesheet" href="./index.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+```
+
+⚠️ **Sin `theme.css` cargado, el diseño NUNCA va a coincidir**.
+
+---
+
+## 2️⃣ Navegación (Navigation.tsx → HTML literal)
+
+```html
+<header class="bg-background text-foreground border-b border-border fixed top-0 w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+
+      <a href="/" class="flex items-center gap-2 text-xl font-medium">
+        📷 Alexgg_photos
+      </a>
+
+      <nav class="hidden md:flex gap-8 text-sm">
+        <a class="hover:text-muted-foreground" href="/">Inicio</a>
+        <a class="hover:text-muted-foreground" href="/categoria/astrofotografia">Astro</a>
+        <a class="hover:text-muted-foreground" href="/categoria/retrato">Retrato</a>
+        <a class="hover:text-muted-foreground" href="/categoria/deportes">Deportes</a>
+        <a class="hover:text-muted-foreground" href="/categoria/paisaje">Paisaje</a>
+        <a class="hover:text-muted-foreground" href="/categoria/animales">Animales</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="md:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 bg-background border-t border-border">
+    <nav class="flex flex-col gap-4 px-4 py-4">
+      <a href="/">Inicio</a>
+      <a href="/categoria/astrofotografia">Astro</a>
+      <a href="/categoria/retrato">Retrato</a>
+      <a href="/categoria/deportes">Deportes</a>
+      <a href="/categoria/paisaje">Paisaje</a>
+      <a href="/categoria/animales">Animales</a>
+    </nav>
+  </div>
+</header>
+```
+
+```html
+<script>
+const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+let open = false;
+
+btn.addEventListener('click', () => {
+  open = !open;
+  btn.textContent = open ? '✕' : '☰';
+  menu.classList.toggle('max-h-96');
+  menu.classList.toggle('opacity-100');
+});
+</script>
+```
+
+---
+
+## 3️⃣ Home — Hero (calcado de Home.tsx)
+
+```html
+<section class="relative pt-32 pb-24 px-4">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920"
+         class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto text-center text-white">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6">Mi Portafolio Fotográfico</h1>
+    <p class="text-xl md:text-2xl text-neutral-200 max-w-2xl mx-auto">
+      Retratos, paisajes y momentos únicos capturados a través de mi lente.
+    </p>
+  </div>
+</section>
+```
+
+---
+
+## 4️⃣ Categorías (misma grid, mismos efectos)
+
+```html
+<section class="py-16 px-4 bg-background">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-semibold text-foreground text-center mb-12">Categorías</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <a href="#" class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-card shadow-lg">
+        <img src="https://images.unsplash.com/photo-1532272278764-53cd1fe53f72?q=80&w=1080"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end">
+          <div class="p-6">
+            <h3 class="text-white text-2xl mb-2">Retrato</h3>
+            <p class="text-neutral-200 text-sm">Fotografía de retrato profesional</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+```
+
+---
+
+## 5️⃣ Página de categoría (Header dinámico REAL)
+
+```html
+<section class="relative pt-24 pb-8 px-4">
+  <div class="absolute inset-0">
+    <img src="IMAGEN_CATEGORIA" class="w-full h-full object-cover opacity-40" />
+  </div>
+
+  <div class="relative max-w-7xl mx-auto text-center text-white">
+    <a href="/" class="inline-flex items-center gap-2 text-neutral-200 mb-6">← Volver a categorías</a>
+    <h1 class="text-5xl mb-4">Retrato</h1>
+    <p class="text-xl text-neutral-300">Fotografía de retrato profesional</p>
+  </div>
+</section>
+```
+
+---
+
+## 6️⃣ Importante (por qué antes NO coincidía)
+
+❌ Usar `bg-white`, `text-black`, `bg-gray-*`
+
+✅ Usar **SIEMPRE**:
+```
+bg-background
+text-foreground
+bg-card
+border-border
+text-muted-foreground
+```
+
+Esto viene **directamente de Figma**, no de Tailwind.
+
+---
+
+## 7️⃣ Conclusión honesta
+
+🔹 El diseño **ya está correctamente traducido**
+🔹 Si no se ve igual:
+
+1. No está cargado `theme.css`
+2. Tailwind no está procesando variables
+3. Se están usando colores hardcodeados
+
+---
+
+## Próximo paso lógico
+
+👉 Si quieres, en el siguiente mensaje puedo:
+- Montarte **un repo base listo**
+- Convertir esto en **tema WordPress real**
+- Ajustar **pixel-perfect mobile**
+
+Dime cómo seguimos.

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ampliar Imagen</title>
+  <style>
+    /* Estilo para el modal */
+    #imageModal {
+      display: none;  /* Inicialmente oculto */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Estilo de la imagen dentro del modal */
+    #imageModal img {
+      max-width: 90%;   /* Tamaño máximo del 90% del ancho de la pantalla */
+      max-height: 90%;  /* Tamaño máximo del 90% del alto de la pantalla */
+      object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+    }
+
+    /* Estilo del botón de cierre */
+    #closeModal {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    .gallery-image {
+      width: 300px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="assets/images/retrato/retrato1.jpeg" alt="Imagen de retrato" class="gallery-image" />
+
+  <!-- Modal para la imagen ampliada -->
+  <div id="imageModal" class="flex">
+    <span id="closeModal" class="text-white">✖</span>
+    <img id="modalImage" src="" alt="Imagen ampliada" />
+  </div>
+
+  <script>
+    // Obtén la imagen y el modal
+    const galleryImage = document.querySelector('.gallery-image');  // Imagen original
+    const modal = document.getElementById('imageModal');  // Modal
+    const modalImage = document.getElementById('modalImage');  // Imagen dentro del modal
+    const closeModal = document.getElementById('closeModal');  // Botón de cerrar modal
+
+    // Evento para abrir el modal al hacer clic en la imagen
+    galleryImage.addEventListener('click', function() {
+      const imageSrc = this.src;  // Obtener la URL de la imagen
+      modal.style.display = 'flex';  // Mostrar el modal
+      modalImage.src = imageSrc;  // Establecer la imagen dentro del modal
+    });
+
+    // Cerrar el modal al hacer clic en el botón de cerrar
+    closeModal.addEventListener('click', function() {
+      modal.style.display = 'none';  // Ocultar el modal
+    });
+
+    // Cerrar el modal al hacer clic fuera de la imagen
+    modal.addEventListener('click', function(event) {
+      if (event.target === this) {
+        modal.style.display = 'none';  // Ocultar el modal
+      }
+    });
+  </script>
+
+</body>
+</html>

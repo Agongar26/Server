@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categoría</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- jQuery (primero) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+
+  <!-- Slick (depende de jQuery) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" defer></script>
+
+  <!-- JS propio -->
+  <script src="js/category.js" defer></script>
+  <script src="js/menu.js" defer></script>
+
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/category.css" />
+</head>
+
+<body class="bg-background text-foreground">
+
+  <!-- NAV (idéntico al index) -->
+  <header class="fixed top-0 w-full z-50 bg-background border-b border-border bg-white">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 text-xl font-medium">
+        📷 Alexgg_photos
+      </a>
+
+      <nav class="hidden md:flex gap-8 text-sm">
+        <a href="index.html">Inicio</a>
+        <a href="category.html?cat=astrofotografia">Astro</a>
+        <a href="category.html?cat=retrato">Retrato</a>
+        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=paisaje">Paisaje</a>
+        <a href="category.html?cat=animales">Animales</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+    </div>
+
+    <div id="mobileMenu"
+      class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 bg-background border-t border-border">
+      <nav class="flex flex-col gap-4 px-4 py-6">
+        <a href="index.html">Inicio</a>
+        <a href="category.html?cat=astrofotografia">Astro</a>
+        <a href="category.html?cat=retrato">Retrato</a>
+        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=paisaje">Paisaje</a>
+        <a href="category.html?cat=animales">Animales</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-20 category-hero">
+    <img id="categoryImage" class="category-bg" />
+    <div class="relative max-w-4xl mx-auto text-center text-neutral-500 font-bold px-4">
+      <a href="index.html" class="inline-block mb-6 text-neutral-200">← Volver</a>
+      <h1 id="categoryTitle" class="text-5xl mb-4"></h1>
+      <p id="categoryDesc" class="text-xl text-neutral-300"></p>
+    </div>
+  </section>
+
+  <!-- Carrusel -->
+  <section class="py-12 px-4 bg-neutral-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-sm uppercase tracking-widest text-neutral-500 mb-3 text-center">
+        Selección
+      </h2>
+      <h3 class="text-3xl font-light text-center mb-10">
+        Galería destacada
+      </h3>
+
+      <div class="carousel-container">
+        <div class="slick-slider"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="py-16 px-4 bg-neutral-100">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl mb-8 text-center">Galería Completa</h2>
+
+      <div class="flex justify-center">
+        <div class="gallery columns-1 sm:columns-2 md:columns-3 lg:columns-5 gap-8 md:gap-10"
+          style="max-width: 1200px;">
+          <!-- Imágenes aquí -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-12 px-4 mt-24">
+    <div class="max-w-7xl mx-auto text-center space-y-2">
+      <p class="text-sm text-neutral-400">
+        © 2025 Mi Portafolio
+      </p>
+      <p class="text-xs text-neutral-500">
+        Fotografía profesional · Todos los derechos reservados
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50 cursor-zoom-out">
+    <img id="lightboxImg" class="max-w-full max-h-full object-contain" />
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Alexgg Photos</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/index.css" />
+
+</head>
+
+<body class="bg-background text-foreground">
+
+  <!-- NAV -->
+  <header class="fixed top-0 w-full z-50 bg-background border-b border-border bg-white">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+
+      <a href="index.html" class="flex items-center gap-2 text-xl font-medium">
+        📷 Alexgg_photos
+      </a>
+
+      <!-- Desktop -->
+      <nav class="hidden md:flex gap-8 text-sm">
+        <a href="index.html">Inicio</a>
+        <a href="category.html?cat=astrofotografia">Astro</a>
+        <a href="category.html?cat=retrato">Retrato</a>
+        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=paisaje">Paisaje</a>
+        <a href="category.html?cat=animales">Animales</a>
+      </nav>
+
+      <!-- Mobile -->
+      <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+    </div>
+
+    <div id="mobileMenu"
+      class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 bg-background border-t border-border">
+      <nav class="flex flex-col gap-4 px-4 py-6">
+        <a href="index.html">Inicio</a>
+        <a href="category.html?cat=astrofotografia">Astro</a>
+        <a href="category.html?cat=retrato">Retrato</a>
+        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=paisaje">Paisaje</a>
+        <a href="category.html?cat=animales">Animales</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative pt-40 pb-32">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1920"
+        class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto text-center text-white px-4">
+      <h1 class="text-5xl md:text-7xl font-semibold tracking-tight mb-8">
+        Mi Portafolio Fotográfico
+      </h1>
+      <p class="text-xl md:text-2xl text-neutral-200">
+        Retratos, paisajes y momentos únicos capturados a través de mi lente.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- CATEGORÍAS -->
+  <section class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl text-center mb-12">
+        Categorías
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card retrato -->
+        <a href="category.html?cat=retrato"
+          class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-card cursor-pointer">
+
+          <img
+            src="https://images.unsplash.com/photo-1532272278764-53cd1fe53f72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end">
+            <div class="p-6 w-full">
+              <h3 class="text-white text-2xl mb-1">Retrato</h3>
+              <p class="text-neutral-200 text-sm">
+                Fotografía de retrato profesional
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card paisaje -->
+
+        <a href="category.html?cat=paisaje"
+          class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-card cursor-pointer">
+
+          <img
+            src="https://images.unsplash.com/photo-1654738344031-441757e8818d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYW5kc2NhcGUlMjBuYXR1cmUlMjBwaG90b2dyYXBoeXxlbnwxfHx8fDE3NjU5MTEzMDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end">
+            <div class="p-6 w-full">
+              <h3 class="text-white text-2xl mb-1">Retrato</h3>
+              <p class="text-neutral-200 text-sm">
+                Fotografía de retrato profesional
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card Animales -->
+
+        <a href="category.html?cat=animales"
+          class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-card cursor-pointer">
+
+          <img
+            src="https://images.unsplash.com/photo-1619237550135-f59c798a3e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aWxkbGlmZSUyMGFuaW1hbCUyMHBob3RvZ3JhcGh5fGVufDF8fHx8MTc2NTk4NjAzNHww&ixlib=rb-4.1.0&q=80&w=1080"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end">
+            <div class="p-6 w-full">
+              <h3 class="text-white text-2xl mb-1">Retrato</h3>
+              <p class="text-neutral-200 text-sm">
+                Fotografía de retrato profesional
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card Astrofotografía -->
+
+        <a href="category.html?cat=astrofotografia"
+          class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-card cursor-pointer">
+
+          <img
+            src="https://images.unsplash.com/photo-1694156303130-1edc4eb3dfcd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhc3Ryb3Bob3RvZ3JhcGh5JTIwc3RhcnMlMjBtaWxreSUyMHdheXxlbnwxfHx8fDE3NjU5ODYwMzR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end">
+            <div class="p-6 w-full">
+              <h3 class="text-white text-2xl mb-1">Retrato</h3>
+              <p class="text-neutral-200 text-sm">
+                Fotografía de retrato profesional
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card deportes -->
+
+        <a href="category.html?cat=deportes"
+          class="group relative aspect-[4/3] overflow-hidden rounded-lg bg-card cursor-pointer">
+
+          <img
+            src="https://images.unsplash.com/photo-1729871519126-7fe16321bd30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBhY3Rpb24lMjBwaG90b2dyYXBoeXxlbnwxfHx8fDE3NjU5MDQ1ODV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end">
+            <div class="p-6 w-full">
+              <h3 class="text-white text-2xl mb-1">Retrato</h3>
+              <p class="text-neutral-200 text-sm">
+                Fotografía de retrato profesional
+              </p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="js/menu.js"></script>
+</body>
+
+</html>

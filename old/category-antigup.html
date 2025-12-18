@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categoría</title>
+
+  <!-- Importación de Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Importar los estilos de slick-carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+  <!-- Importar tu propio CSS -->
+  <link rel="stylesheet" href="css/theme.css" />
+  <style>
+    /* Estilo adicional para asegurar que el carrusel tenga la altura adecuada */
+    .carousel-container {
+      min-height: 400px;
+      /* Ajustar al tamaño que prefieras */
+    }
+
+    .gallery img {
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-foreground">
+
+  <!-- NAV -->
+  <!-- NAV -->
+  <header class="fixed top-0 w-full z-50 bg-background border-b border-border bg-white">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+
+      <a href="index.html" class="flex items-center gap-2 text-xl font-medium">
+        📷 Alexgg_photos
+      </a>
+
+      <!-- Desktop -->
+      <nav class="hidden md:flex gap-8 text-sm">
+        <a href="index.html">Inicio</a>
+        <a href="category.html?cat=astrofotografia">Astro</a>
+        <a href="category.html?cat=retrato">Retrato</a>
+        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=paisaje">Paisaje</a>
+        <a href="category.html?cat=animales">Animales</a>
+      </nav>
+
+      <!-- Mobile -->
+      <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+    </div>
+
+    <div id="mobileMenu"
+      class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 bg-background border-t border-border">
+      <nav class="flex flex-col gap-4 px-4 py-6">
+        <a href="index.html">Inicio</a>
+        <a href="category.html?cat=astrofotografia">Astro</a>
+        <a href="category.html?cat=retrato">Retrato</a>
+        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=paisaje">Paisaje</a>
+        <a href="category.html?cat=animales">Animales</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="relative pt-32 pb-20">
+    <div class="absolute inset-0">
+      <img id="categoryImage" class="w-full h-full object-cover opacity-40" />
+    </div>
+    <div class="relative max-w-4xl mx-auto text-center text-white px-4">
+      <a href="index.html" class="inline-block mb-6 text-neutral-200">← Volver</a>
+      <h1 id="categoryTitle" class="text-5xl mb-4"></h1>
+      <p id="categoryDesc" class="text-xl text-neutral-300"></p>
+    </div>
+  </section>
+
+  <!-- Carrusel de imágenes -->
+  <section class="py-12 px-4 bg-neutral-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl mb-8 text-center">Galería Destacada</h2>
+      <div class="carousel-container">
+        <div class="slick-slider">
+          <!-- Las imágenes del carrusel se generarán dinámicamente -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería Completa de la Categoría -->
+  <section class="py-16 px-4 bg-neutral-100">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl mb-8 text-center">Galería Completa</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 gallery">
+        <!-- Las fotos completas se agregarán dinámicamente aquí -->
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    // Datos de las categorías
+    const data = {
+      retrato: {
+        title: 'Retrato',
+        desc: 'Fotografía de retrato profesional',
+        image: "assets/images/retrato/retrato1.jpeg",  // Imagen principal
+        photos: [
+          "assets/images/retrato/retrato1.jpeg",
+          "assets/images/retrato/retrato2.jpeg",
+          "assets/images/retrato/retrato3.jpeg",
+          "assets/images/retrato/retrato4.jpeg",
+          "assets/images/retrato/retrato5.jpeg",
+          "assets/images/retrato/retrato6.jpeg"
+        ]
+      },
+      paisaje: {
+        title: 'Paisaje',
+        desc: 'Fotografía de paisajes impresionantes',
+        image: "assets/images/paisaje/paisaje1.jpeg",
+        photos: [
+          "assets/images/paisaje/paisaje1.jpeg",
+          "assets/images/paisaje/paisaje2.jpeg",
+          "assets/images/paisaje/paisaje3.jpeg",
+          "assets/images/paisaje/paisaje4.jpeg",
+          "assets/images/paisaje/paisaje5.jpeg",
+          "assets/images/paisaje/paisaje6.jpeg"
+        ]
+      },
+      animales: {
+        title: 'Animales',
+        desc: 'Fotografía de animales en su hábitat natural',
+        image: "assets/images/animales/animales1.jpeg",
+        photos: [
+          "assets/images/animales/animales1.jpeg",
+          "assets/images/animales/animales2.jpeg",
+          "assets/images/animales/animales3.jpeg",
+          "assets/images/animales/animales4.jpeg",
+          "assets/images/animales/animales5.jpeg",
+          "assets/images/animales/animales6.jpeg"
+        ]
+      },
+      astrofotografia: {
+        title: 'Astrofotografía',
+        desc: 'Fotografía del cielo y el universo',
+        image: "assets/images/astro/astro1.jpeg",
+        photos: [
+          "assets/images/astro/astro1.jpeg",
+          "assets/images/astro/astro2.jpeg",
+          "assets/images/astro/astro3.jpeg",
+          "assets/images/astro/astro4.jpeg",
+          "assets/images/astro/astro5.jpeg"
+        ]
+      },
+      deportes: {
+        title: 'Deportes',
+        desc: 'Capturas de deportes y acción',
+        image: "assets/images/deportes/deporte1.jpeg",
+        photos: [
+          "assets/images/deportes/deporte1.jpeg",
+          "assets/images/deportes/deporte2.jpeg",
+          "assets/images/deportes/deporte3.jpeg",
+          "assets/images/deportes/deporte4.jpeg",
+          "assets/images/deportes/deporte5.jpeg"
+        ]
+      }
+    };
+
+    // Obtención de parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('cat');
+
+    // Verificar si la categoría existe
+    if (data[category]) {
+      const catData = data[category];
+
+      // Actualizar título, descripción e imagen principal
+      document.getElementById("categoryTitle").textContent = catData.title;
+      document.getElementById("categoryDesc").textContent = catData.desc;
+      document.getElementById("categoryImage").src = catData.image;
+
+      // Llenar el carrusel
+      const slickSlider = document.querySelector(".slick-slider");
+      catData.photos.forEach(photo => {
+        const slide = document.createElement("div");
+        slide.innerHTML = `<img src="${photo}" alt="Imagen de ${catData.title}" class="w-full h-96 object-cover" />`;
+        slickSlider.appendChild(slide);
+      });
+
+      // Llenar la galería
+      const galleryContainer = document.querySelector(".gallery");
+      catData.photos.forEach(photo => {
+        const galleryItem = document.createElement("div");
+        galleryItem.classList.add("group", "relative", "overflow-hidden");
+        galleryItem.innerHTML = `
+          <img src="${photo}" alt="Imagen de ${catData.title}" class="w-full h-64 object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-4 opacity-0 group-hover:opacity-100">
+            <h3 class="text-white text-lg">Imagen</h3>
+          </div>
+        `;
+        galleryContainer.appendChild(galleryItem);
+      });
+
+      // Iniciar carrusel
+      $(document).ready(function () {
+        $('.slick-slider').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear'
+        });
+      });
+    }
+  </script>
+  <script src="js/menu.js"></script>
+</body>
+
+</html>
