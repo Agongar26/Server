@@ -40,13 +40,13 @@ const data = {
       "assets/images/astro/astro1.jpg",
     ],
   },
-  deportes: {
-    title: "Deportes",
+  deporte: {
+    title: "Deporte",
     desc: "Capturas de deportes y acción",
-    image: "assets/images/deportes/deporte1.jpeg",
+    image: "assets/images/deporte/deporte1.jpeg",
     photos: [
-      "assets/images/deportes/deporte1.jpeg",
-      "assets/images/deportes/deporte2.jpeg",
+      "assets/images/deporte/deporte1.jpeg",
+      "assets/images/deporte/deporte2.jpeg",
     ],
   },
 };
