@@ -40,7 +40,7 @@
     <div id="mobileMenu"
       class="md:hidden max-h-0 overflow-hidden opacity-0 transition-all duration-300 bg-background border-t border-border">
       <nav class="flex flex-col gap-4 px-4 py-6">
-        <a href="index.html">Inicio</a>
+        <a href="index.html" class="active">Inicio</a>
         <a href="category.html?cat=astrofotografia">Astro</a>
         <a href="category.html?cat=retrato">Retrato</a>
         <a href="category.html?cat=deporte">Deporte</a>
@@ -71,16 +71,18 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Astro -->
-        <a href="category.html?cat=astrofotografia" class="group relative h-80 overflow-hidden rounded-xl">
+        <a href="category.html?cat=astrofotografia" class="group relative h-80 overflow-hidden rounded-xl
+          category-card opacity-0 translate-y-10 scale-95 
+          transition-all duration-700 ease-out">
           <img src="assets/images/astro/astro1.jpg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
           <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-end pb-6">
             <!-- Contenido -->
             <div class="flex flex-col items-center gap-2  
-                opacity-0 translate-y-4
+                lg:opacity-0 lg:translate-y-4
                 transition-all duration-300 ease-out
-                group-hover:opacity-100 group-hover:translate-y-0">
+                lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
               <!-- Línea superior -->
               <div class="w-12 h-px bg-white/60"></div>
               <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
@@ -94,16 +96,18 @@
         </a>
 
         <!-- Retrato -->
-        <a href="category.html?cat=retrato" class="group relative h-80 overflow-hidden rounded-xl">
+        <a href="category.html?cat=retrato" class="group relative h-80 overflow-hidden rounded-xl
+          category-card opacity-0 translate-y-10 scale-95 
+          transition-all duration-700 ease-out">
           <img src="assets/images/retrato/retrato1.jpeg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
           <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
             <!-- Contenido -->
             <div class="flex flex-col items-center gap-2  
-                opacity-0 translate-y-4
+                lg:opacity-0 lg:translate-y-4
                 transition-all duration-300 ease-out
-                group-hover:opacity-100 group-hover:translate-y-0">
+                lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
               <!-- Línea superior -->
               <div class="w-12 h-px bg-white/60"></div>
               <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
@@ -117,16 +121,18 @@
         </a>
 
         <!-- Deportes -->
-        <a href="category.html?cat=deporte" class="group relative h-80 overflow-hidden rounded-xl">
+        <a href="category.html?cat=deporte" class="group relative h-80 overflow-hidden rounded-xl
+          category-card opacity-0 translate-y-10 scale-95 
+          transition-all duration-700 ease-out">
           <img src="assets/images/deporte/deporte1.jpeg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
           <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
             <!-- Contenido -->
             <div class="flex flex-col items-center gap-2  
-                opacity-0 translate-y-4
+                lg:opacity-0 lg:translate-y-4
                 transition-all duration-300 ease-out
-                group-hover:opacity-100 group-hover:translate-y-0">
+                lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
               <!-- Línea superior -->
               <div class="w-12 h-px bg-white/60"></div>
               <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
@@ -140,16 +146,18 @@
         </a>
 
         <!-- Paisaje -->
-        <a href="category.html?cat=paisaje" class="group relative h-80 overflow-hidden rounded-xl">
+        <a href="category.html?cat=paisaje" class="group relative h-80 overflow-hidden rounded-xl
+          category-card opacity-0 translate-y-10 scale-95 
+          transition-all duration-700 ease-out">
           <img src="assets/images/paisaje/paisaje1.jpg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
           <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
             <!-- Contenido -->
             <div class="flex flex-col items-center gap-2  
-                opacity-0 translate-y-4
+                lg:opacity-0 lg:translate-y-4
                 transition-all duration-300 ease-out
-                group-hover:opacity-100 group-hover:translate-y-0">
+                lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
               <!-- Línea superior -->
               <div class="w-12 h-px bg-white/60"></div>
               <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
@@ -163,16 +171,18 @@
         </a>
 
         <!-- Animales -->
-        <a href="category.html?cat=fauna" class="group relative h-80 overflow-hidden rounded-xl">
+        <a href="category.html?cat=fauna" class="group relative h-80 overflow-hidden rounded-xl
+          category-card opacity-0 translate-y-10 scale-95 
+          transition-all duration-700 ease-out">
           <img src="assets/images/fauna/fauna1.jpg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
           <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
             <!-- Contenido -->
             <div class="flex flex-col items-center gap-2  
-                opacity-0 translate-y-4
+                lg:opacity-0 lg:translate-y-4
                 transition-all duration-300 ease-out
-                group-hover:opacity-100 group-hover:translate-y-0">
+                lg:group-hover:opacity-100 lg:group-hover:translate-y-0">
               <!-- Línea superior -->
               <div class="w-12 h-px bg-white/60"></div>
               <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
