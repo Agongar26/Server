@@ -69,15 +69,16 @@ if (data[category]) {
     slider.innerHTML += `
     <div>
       <img src="${photo}"
-           class="w-full h-96 object-cover cursor-default">
+        class="w-full h-96 object-cover cursor-default">
     </div>`;
 
     // Galería con lightbox
     gallery.innerHTML += `
     <img src="${photo}"
-       class="w-full mb-8 break-inside-avoid cursor-zoom-in gallery-img"
-       data-full="${photo}">`;
-
+      class="w-full mb-8 break-inside-avoid cursor-zoom-in gallery-img gallery-item
+      opacity-0 translate-y-8 scale-95
+      transition-all duration-700 ease-out"
+      data-full="${photo}">`;
   });
 
   $(document).ready(() => {
@@ -97,10 +98,10 @@ if (data[category]) {
 
   // Marcar el enlace activo en la navegación
   const navLinks = document.querySelectorAll("nav a");
-  navLinks.forEach(link => {
-    const linkCategory = link.href.split('=')[1]; // Obtener la categoría del enlace
+  navLinks.forEach((link) => {
+    const linkCategory = link.href.split("=")[1]; // Obtener la categoría del enlace
     if (linkCategory === category) {
-      link.classList.add("active");  // Agregar clase active al enlace correspondiente
+      link.classList.add("active"); // Agregar clase active al enlace correspondiente
     }
   });
 }
@@ -125,3 +126,19 @@ lightbox.addEventListener("click", () => {
   lightboxImg.src = "";
   document.body.style.overflow = "";
 });
+
+// Animación de entrada galería
+const galleryItems = document.querySelectorAll(".gallery-item");
+const galleryObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("opacity-0", "translate-y-8", "scale-95");
+        entry.target.classList.add("opacity-100", "translate-y-0", "scale-100");
+        galleryObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+galleryItems.forEach((item) => galleryObserver.observe(item));
