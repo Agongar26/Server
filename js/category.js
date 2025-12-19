@@ -22,13 +22,13 @@ const data = {
       "assets/images/paisaje/paisaje3.jpeg",
     ],
   },
-  animales: {
-    title: "Animales",
+  fauna: {
+    title: "Fauna",
     desc: "Fotografía de animales en su hábitat natural",
-    image: "assets/images/animales/animales1.jpg",
+    image: "assets/images/fauna/fauna1.jpg",
     photos: [
-      "assets/images/animales/animales1.jpg",
-      "assets/images/animales/animales2.jpeg",
+      "assets/images/fauna/fauna1.jpg",
+      "assets/images/fauna/fauna2.jpeg",
     ],
   },
   astrofotografia: {
@@ -40,13 +40,13 @@ const data = {
       "assets/images/astro/astro1.jpg",
     ],
   },
-  deportes: {
-    title: "Deportes",
+  deporte: {
+    title: "Deporte",
     desc: "Capturas de deportes y acción",
-    image: "assets/images/deportes/deporte1.jpeg",
+    image: "assets/images/deporte/deporte1.jpeg",
     photos: [
-      "assets/images/deportes/deporte1.jpeg",
-      "assets/images/deportes/deporte2.jpeg",
+      "assets/images/deporte/deporte1.jpeg",
+      "assets/images/deporte/deporte2.jpeg",
     ],
   },
 };
@@ -93,6 +93,15 @@ if (data[category]) {
       pauseOnFocus: false,
       cssEase: "ease-in-out",
     });
+  });
+
+  // Marcar el enlace activo en la navegación
+  const navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(link => {
+    const linkCategory = link.href.split('=')[1]; // Obtener la categoría del enlace
+    if (linkCategory === category) {
+      link.classList.add("active");  // Agregar clase active al enlace correspondiente
+    }
   });
 }
 

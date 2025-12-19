@@ -37,3 +37,12 @@ h1, h2, h3 {
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   color: #e5e5e5;
 }
+
+nav a.active {
+  color: #FF6347; /* Rojo anaranjado, puedes cambiar el color */
+  /*font-weight: bold;*/
+}
+
+nav a.active:hover {
+  color: #FF4500; /* Un color más intenso cuando pasa el ratón */
+}

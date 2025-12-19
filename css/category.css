@@ -26,3 +26,12 @@
 .gallery img:hover {
   transform: scale(1.03);
 }
+
+nav a.active {
+  color: #FF6347; /* Rojo anaranjado, puedes cambiar el color */
+  /*font-weight: bold;*/
+}
+
+nav a.active:hover {
+  color: #FF4500; /* Un color más intenso cuando pasa el ratón */
+}

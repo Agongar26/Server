@@ -26,12 +26,12 @@
       </a>
 
       <nav class="hidden md:flex gap-8 text-sm">
-        <a href="index.html">Inicio</a>
+        <a href="index.html" class="active">Inicio</a>
         <a href="category.html?cat=astrofotografia">Astro</a>
         <a href="category.html?cat=retrato">Retrato</a>
-        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=deporte">Deporte</a>
         <a href="category.html?cat=paisaje">Paisaje</a>
-        <a href="category.html?cat=animales">Animales</a>
+        <a href="category.html?cat=fauna">Fauna</a>
       </nav>
 
       <button id="menuBtn" class="md:hidden text-3xl">☰</button>
@@ -43,9 +43,9 @@
         <a href="index.html">Inicio</a>
         <a href="category.html?cat=astrofotografia">Astro</a>
         <a href="category.html?cat=retrato">Retrato</a>
-        <a href="category.html?cat=deportes">Deportes</a>
+        <a href="category.html?cat=deporte">Deporte</a>
         <a href="category.html?cat=paisaje">Paisaje</a>
-        <a href="category.html?cat=animales">Animales</a>
+        <a href="category.html?cat=fauna">Fauna</a>
       </nav>
     </div>
   </header>
@@ -74,8 +74,22 @@
         <a href="category.html?cat=astrofotografia" class="group relative h-80 overflow-hidden rounded-xl">
           <img src="assets/images/astro/astro1.jpg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-          <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
-            <h3 class="text-white text-3xl font-light">Astrofotografía</h3>
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-end pb-6">
+            <!-- Contenido -->
+            <div class="flex flex-col items-center gap-2  
+                opacity-0 translate-y-4
+                transition-all duration-300 ease-out
+                group-hover:opacity-100 group-hover:translate-y-0">
+              <!-- Línea superior -->
+              <div class="w-12 h-px bg-white/60"></div>
+              <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
+                Astrofotografía
+              </h3>
+              <span class="text-white/70 text-sm tracking-wide mt-1">
+                Cielo nocturno
+              </span>
+            </div>
           </div>
         </a>
 
@@ -83,17 +97,45 @@
         <a href="category.html?cat=retrato" class="group relative h-80 overflow-hidden rounded-xl">
           <img src="assets/images/retrato/retrato1.jpeg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
-            <h3 class="text-white text-3xl font-light">Retrato</h3>
+            <!-- Contenido -->
+            <div class="flex flex-col items-center gap-2  
+                opacity-0 translate-y-4
+                transition-all duration-300 ease-out
+                group-hover:opacity-100 group-hover:translate-y-0">
+              <!-- Línea superior -->
+              <div class="w-12 h-px bg-white/60"></div>
+              <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
+                Retrato
+              </h3>
+              <span class="text-white/70 text-sm tracking-wide mt-1">
+                Expresión humana
+              </span>
+            </div>
           </div>
         </a>
 
         <!-- Deportes -->
-        <a href="category.html?cat=deportes" class="group relative h-80 overflow-hidden rounded-xl">
-          <img src="assets/images/deportes/deporte1.jpeg"
+        <a href="category.html?cat=deporte" class="group relative h-80 overflow-hidden rounded-xl">
+          <img src="assets/images/deporte/deporte1.jpeg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
-            <h3 class="text-white text-3xl font-light">Deportes</h3>
+            <!-- Contenido -->
+            <div class="flex flex-col items-center gap-2  
+                opacity-0 translate-y-4
+                transition-all duration-300 ease-out
+                group-hover:opacity-100 group-hover:translate-y-0">
+              <!-- Línea superior -->
+              <div class="w-12 h-px bg-white/60"></div>
+              <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
+                Fotografía deportiva
+              </h3>
+              <span class="text-white/70 text-sm tracking-wide mt-1">
+                Acción y energía
+              </span>
+            </div>
           </div>
         </a>
 
@@ -101,17 +143,45 @@
         <a href="category.html?cat=paisaje" class="group relative h-80 overflow-hidden rounded-xl">
           <img src="assets/images/paisaje/paisaje1.jpg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
-            <h3 class="text-white text-3xl font-light">Paisaje</h3>
+            <!-- Contenido -->
+            <div class="flex flex-col items-center gap-2  
+                opacity-0 translate-y-4
+                transition-all duration-300 ease-out
+                group-hover:opacity-100 group-hover:translate-y-0">
+              <!-- Línea superior -->
+              <div class="w-12 h-px bg-white/60"></div>
+              <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
+                Fotografía de paisaje
+              </h3>
+              <span class="text-white/70 text-sm tracking-wide mt-1">
+                Naturaleza en su esplendor
+              </span>
+            </div>
           </div>
         </a>
 
         <!-- Animales -->
-        <a href="category.html?cat=animales" class="group relative h-80 overflow-hidden rounded-xl">
-          <img src="assets/images/animales/animales1.jpg"
+        <a href="category.html?cat=fauna" class="group relative h-80 overflow-hidden rounded-xl">
+          <img src="assets/images/fauna/fauna1.jpg"
             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <!-- Overlay -->
           <div class="absolute inset-0 bg-black/40 flex items-end justify-center pb-6">
-            <h3 class="text-white text-3xl font-light">Animales</h3>
+            <!-- Contenido -->
+            <div class="flex flex-col items-center gap-2  
+                opacity-0 translate-y-4
+                transition-all duration-300 ease-out
+                group-hover:opacity-100 group-hover:translate-y-0">
+              <!-- Línea superior -->
+              <div class="w-12 h-px bg-white/60"></div>
+              <h3 class="text-white text-lg font-extralight tracking-[0.3em] uppercase">
+                Fotografía de fauna
+              </h3>
+              <span class="text-white/70 text-sm tracking-wide mt-1">
+                Fauna salvaje
+              </span>
+            </div>
           </div>
         </a>
 
