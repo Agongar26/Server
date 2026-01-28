@@ -13,14 +13,16 @@ if (data[category]) {
   const slider = document.querySelector(".slick-slider");
   const gallery = document.querySelector(".gallery");
 
-  cat.photos.forEach((photo) => {
+  cat.carrusel.forEach((carr) => {  // Obtener las imágenes de carrusel
     // Carrusel sin lightbox
     slider.innerHTML += `
     <div>
-      <img src="${photo}"
+      <img src="${carr}"
         class="w-full h-96 object-cover cursor-default">
     </div>`;
+  });
 
+  cat.photos.forEach((photo) => { // Obtener las imágenes de photos
     // Galería con lightbox
     gallery.innerHTML += `
     <img src="${photo}"
