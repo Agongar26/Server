@@ -1,0 +1,41 @@
+/* ============================= */
+/* Theme base – Alexgg Photos */
+/* ============================= */
+
+:root {
+  /* Colores base */
+  --background: #ffffff;
+  --foreground: #111111;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+
+  /* Fotografía / mood */
+  --accent: #ff6347;
+  --accent-hover: #ff4500;
+}
+
+/* Helpers compatibles con Tailwind */
+.bg-background {
+  background-color: var(--background);
+}
+
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.border-border {
+  border-color: var(--border);
+}
+
+/* Links activos (nav) */
+nav a.active {
+  color: var(--accent);
+}
+
+nav a.active:hover {
+  color: var(--accent-hover);
+}
